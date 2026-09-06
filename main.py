@@ -41,11 +41,9 @@ while linha < linhas:
     while coluna < colunas:
         if linha_escolhida[coluna] in "rR":
             ponto_inicial = Cidade("R",linha,coluna)
-            #ponto_inicial = (linha_escolhida[coluna],linha, coluna)
         elif linha_escolhida[coluna].isalpha():
             cidade_a = Cidade(linha_escolhida[coluna],linha,coluna)
             cidades.append(cidade_a)
-            #cidades.append((linha_escolhida[coluna],linha,coluna))
         coluna += 1
     coluna = 0
     linha += 1

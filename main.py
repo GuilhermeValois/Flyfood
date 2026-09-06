@@ -1,28 +1,43 @@
 from cidade import Cidade
-import sys
+import os
 import time
 
 ponto_inicial = None
 cidades = []
 
 #Obtenção da matriz
-print("Digite o tamanho da matris(Ex:4x5) e a matriz (Linha por linha):\n")
-matriz = sys.stdin.read().split()
-#Separando o dado de tamanho da matriz da matriz em si
-tamanho_matriz = matriz[0]
-matriz = matriz[1:]
+caminho_entrada = os.path.join(os.path.dirname(__file__), "entrada.txt")
+
+with open(caminho_entrada, "r") as arquivo:
+    matriz_de_entrada = arquivo.read().split()
+
 #Definindo a quantidade de linhas e colunas da matriz inicialmente ajustadas para 0
-linhas = 0
-colunas = 0
-for algarismo in tamanho_matriz:
-    if algarismo == "x" or algarismo == "X":
-        linhas = int(tamanho_matriz[:tamanho_matriz.index(algarismo)])
-        colunas = int(tamanho_matriz[tamanho_matriz.index(algarismo)+1:])
+linhas = int(matriz_de_entrada[0])
+colunas = int(matriz_de_entrada[1])
+
+#Separando o dado de tamanho da matriz da matriz em si
+matriz = matriz_de_entrada[2:]
+
+#Tratando a matriz para que seja possível acessar cada elemento de forma mais simples
+linha = 0
+coluna = 0
+index = 0
+matriz_tratada = []
+while linha < linhas:
+    lista_linhas = []
+    while coluna < colunas:
+        lista_linhas.append(matriz[index])
+        index += 1
+        coluna += 1
+    matriz_tratada.append(lista_linhas)
+    coluna = 0
+    linha += 1
+
 #Obtendo o ponto inicial e a posição das cidades na matriz
 linha = 0
 coluna = 0
 while linha < linhas:
-    linha_escolhida = matriz[linha] 
+    linha_escolhida = matriz_tratada[linha] 
     while coluna < colunas:
         if linha_escolhida[coluna] in "rR":
             ponto_inicial = Cidade("R",linha,coluna)
@@ -39,7 +54,6 @@ inicio = time.perf_counter()
 
 combinacoes = []
 combinacao = []
-
 def combinar_cidades(cidades,combinacao):
     """
     Função que gera todas as possibilidades de caminhos
@@ -86,6 +100,5 @@ for caminho in distancias:
         menor_caminho = caminho
 fim = time.perf_counter()
 #Imprimindo o menor caminho e sua distância
-print(f"Menor caminho:{menor_caminho}")
+print(f"Menor caminho:{'->'.join(cidade.nome for cidade in menor_caminho[0])} com distância de {menor_caminho[1]} dronômetros")
 print(f"Tempo do algoritmo: {fim - inicio:.4f} segundos")
-                    

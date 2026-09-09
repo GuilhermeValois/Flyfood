@@ -10,8 +10,6 @@ cidades = []
 #Obtenção da matriz
 caminho_entrada = os.path.join(os.path.dirname(__file__), "entrada.txt")
 
-#with open(caminho_entrada, "r") as arquivo:
-    #matriz_de_entrada = arquivo.read().split()
 caso_escolhido = 15
 
 with open(caminho_entrada, "r", encoding="utf-8") as arquivo:

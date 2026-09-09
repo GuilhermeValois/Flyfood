@@ -18,7 +18,7 @@ def calcular_distancia(combinacao,ponto_inicial):
     distancia_x = abs(ponto_inicial.coluna - combinacao[-1].coluna)
     distancia_total += distancia_y+distancia_x
 
-    #distancias.append((combinacao,distancia_total))
+    
     return (combinacao.copy(),distancia_total)
 
 
@@ -49,5 +49,5 @@ def combinar_cidades(cidades,combinacao,combinacoes,ponto_inicial):
                         
                 elif caminho[1] == combinacoes[0][1] and caminho not in combinacoes:
                     combinacoes.append(caminho)
-                #combinacoes.append(combinacao.copy())
+                
                 combinacao.pop()

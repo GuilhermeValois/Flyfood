@@ -1,6 +1,8 @@
 from cidade import Cidade
 import os
 import time
+import algoritmo
+
 
 ponto_inicial = None
 cidades = []
@@ -8,8 +10,35 @@ cidades = []
 #Obtenção da matriz
 caminho_entrada = os.path.join(os.path.dirname(__file__), "entrada.txt")
 
-with open(caminho_entrada, "r") as arquivo:
-    matriz_de_entrada = arquivo.read().split()
+#with open(caminho_entrada, "r") as arquivo:
+    #matriz_de_entrada = arquivo.read().split()
+caso_escolhido = 15
+
+with open(caminho_entrada, "r", encoding="utf-8") as arquivo:
+    linhas = arquivo.readlines()
+
+caso_atual = 0
+entrada = []
+
+dentro_do_caso = False
+
+for linha in linhas:
+    linha = linha.strip()
+
+    if linha.startswith("CASO"):
+        caso_atual = int(linha.split()[1])
+        dentro_do_caso = caso_atual == caso_escolhido
+
+    elif linha == "FIM":
+        dentro_do_caso = False
+
+    elif dentro_do_caso and not linha.startswith("CASO"):
+        entrada.append(linha)
+
+matriz_de_entrada = []
+
+for linha in entrada:
+    matriz_de_entrada.extend(linha.split())
 
 #Definindo a quantidade de linhas e colunas da matriz inicialmente ajustadas para 0
 linhas = int(matriz_de_entrada[0])
@@ -48,55 +77,17 @@ while linha < linhas:
     coluna = 0
     linha += 1
 
-inicio = time.perf_counter()
-
+#Iniciando a lista das combinações e a lista de uma combinação de cidades, que será preenchida recursivamente
 combinacoes = []
 combinacao = []
-def combinar_cidades(cidades,combinacao):
-    """
-    Função que gera todas as possibilidades de caminhos
-    entre as cidades guardando as combinações em uma lista
-    """
-    for cidade in cidades:
-        
-        if cidade not in combinacao:
-            combinacao.append(cidade)
-            
-            if len(combinacao) < len(cidades):
-                combinar_cidades(cidades,combinacao)
-                
-                combinacao.pop()
-            else:
-                combinacoes.append(combinacao.copy())
-                combinacao.pop()
 
-combinar_cidades(cidades,combinacao)
-#Registrando em uma lista cada caminho a sua distância calculada
-distancias = []
+#Execução do algoritmo de combinação de cidades e cálculo da distância, marcando seu tempo de execução
+inicio = time.perf_counter()
 
-for combinacao in combinacoes:
-    distancia_total = 0
-    for indice in range(0,len(combinacao)-1): 
-        distancia_y = abs(combinacao[indice].linha - combinacao[indice+1].linha)
-        distancia_x = abs(combinacao[indice].coluna - combinacao[indice+1].coluna)
-        distancia_total += distancia_y+distancia_x
+algoritmo.combinar_cidades(cidades,combinacao,combinacoes,ponto_inicial)
 
-    distancia_y = abs(ponto_inicial.linha - combinacao[0].linha)
-    distancia_x = abs(ponto_inicial.coluna - combinacao[0].coluna)
-    distancia_total += distancia_y+distancia_x
-
-    distancia_y = abs(ponto_inicial.linha - combinacao[-1].linha)
-    distancia_x = abs(ponto_inicial.coluna - combinacao[-1].coluna)
-    distancia_total += distancia_y+distancia_x
-
-    distancias.append((combinacao,distancia_total))
-
-#Procurando o menor caminho
-menor_caminho = distancias[0]
-for caminho in distancias:
-    if menor_caminho[1] > caminho[1]:
-        menor_caminho = caminho
 fim = time.perf_counter()
+
 #Imprimindo o menor caminho e sua distância
-print(f"Menor caminho:{'->'.join(cidade.nome for cidade in menor_caminho[0])} com distância de {menor_caminho[1]} dronômetros")
+print(f"Menor caminho:{'->'.join(cidade.nome for cidade in combinacoes[0][0])} com distância de {combinacoes[0][1]} dronômetros")
 print(f"Tempo do algoritmo: {fim - inicio:.4f} segundos")

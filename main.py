@@ -7,7 +7,7 @@ import algoritmo
 ponto_inicial = None
 cidades = []
 
-#Obtenção da matriz
+#Obtenção da matriz do arquivo txt
 caminho_entrada = os.path.join(os.path.dirname(__file__), "entrada.txt")
 
 caso_escolhido = 15
@@ -38,11 +38,11 @@ matriz_de_entrada = []
 for linha in entrada:
     matriz_de_entrada.extend(linha.split())
 
-#Definindo a quantidade de linhas e colunas da matriz inicialmente ajustadas para 0
+#Definindo a quantidade de linhas e colunas da matriz
 linhas = int(matriz_de_entrada[0])
 colunas = int(matriz_de_entrada[1])
 
-#Separando o dado de tamanho da matriz da matriz em si
+#Separando o dado de tamanho da própria matriz matriz
 matriz = matriz_de_entrada[2:]
 
 #Tratando a matriz para que seja possível acessar cada elemento de forma mais simples

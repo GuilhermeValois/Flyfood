@@ -8,11 +8,12 @@ CASO 1
 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
+0 0 0 0 0 0 0 0 0   
 FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância: 
 # Distância:
 # Tempo de execução:
 
@@ -26,11 +27,12 @@ CASO 2
 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
+0 0 0 0 0 0 0 0 0   
 FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância: 
 # Distância:
 # Tempo de execução:
 
@@ -49,6 +51,7 @@ FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância:
 # Distância:
 # Tempo de execução:
 
@@ -62,11 +65,12 @@ CASO 4
 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
+0 0 0 0 0 0 0 0 0   
 FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância:
 # Distância:
 # Tempo de execução:
 
@@ -85,6 +89,7 @@ FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância:
 # Distância:
 # Tempo de execução:
 
@@ -103,6 +108,7 @@ FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância:
 # Distância:
 # Tempo de execução:
 
@@ -121,6 +127,7 @@ FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância:
 # Distância:
 # Tempo de execução:
 
@@ -139,6 +146,7 @@ FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância:
 # Distância:
 # Tempo de execução:
 
@@ -157,6 +165,7 @@ FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância:
 # Distância:
 # Tempo de execução:
 
@@ -175,6 +184,7 @@ FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância:
 # Distância:
 # Tempo de execução:
 
@@ -193,6 +203,7 @@ FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância:
 # Distância:
 # Tempo de execução:
 
@@ -211,6 +222,7 @@ FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância:
 # Distância:
 # Tempo de execução:
 
@@ -229,6 +241,7 @@ FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância:
 # Distância:
 # Tempo de execução:
 
@@ -247,6 +260,7 @@ FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância:
 # Distância:
 # Tempo de execução:
 
@@ -265,5 +279,6 @@ FIM
 
 # SAÍDA:
 # Sequência de cidades:
+# Sequências de mesma distância:
 # Distância:
 # Tempo de execução:

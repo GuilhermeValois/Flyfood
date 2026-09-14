@@ -10,7 +10,7 @@ cidades = []
 #Obtenção da matriz do arquivo txt
 caminho_entrada = os.path.join(os.path.dirname(__file__), "entrada.txt")
 
-caso_escolhido = 15
+caso_escolhido = 4
 
 with open(caminho_entrada, "r", encoding="utf-8") as arquivo:
     linhas = arquivo.readlines()
@@ -88,4 +88,5 @@ fim = time.perf_counter()
 
 #Imprimindo o menor caminho e sua distância
 print(f"Menor caminho:{'->'.join(cidade.nome for cidade in combinacoes[0][0])} com distância de {combinacoes[0][1]} dronômetros")
+print(f"Caminhos de mesma distância: {combinacoes[1:]}")
 print(f"Tempo do algoritmo: {fim - inicio:.4f} segundos")

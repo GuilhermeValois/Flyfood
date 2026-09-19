@@ -10,7 +10,7 @@ cidades = []
 #Obtenção da matriz do arquivo txt
 caminho_entrada = os.path.join(os.path.dirname(__file__), "entrada.txt")
 
-caso_escolhido = 4
+caso_escolhido = 1
 
 with open(caminho_entrada, "r", encoding="utf-8") as arquivo:
     linhas = arquivo.readlines()

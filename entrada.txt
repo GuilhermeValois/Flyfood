@@ -1,284 +1,130 @@
 CASO 1
 9 9
+R 0 0 0 0 0 E 0 0
 0 0 0 0 0 0 0 0 0
+I 0 A 0 0 C 0 0 0 
+0 0 0 0 0 0 0 H 0
 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
+0 0 F 0 0 0 0 0 0
+0 0 0 0 0 B 0 0 0
 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0   
+0 D 0 0 0 0 0 0 G    
 FIM
 
-# SAÍDA:
-# Sequência de cidades:
-# Sequências de mesma distância: 
-# Distância:
-# Tempo de execução:
+# SAÍDA:E->C->H->B->G->D->F->A->I
+# Sequência de cidades: 9
+# Sequências de mesma distância:
+[([E, C, H, G, B, D, F, A, I], 40)
+([E, H, C, B, G, D, F, A, I], 40)
+([I, A, F, D, B, G, H, C, E], 40) 
+([I, A, F, D, G, B, C, H, E], 40) 
+([I, A, F, D, G, B, H, C, E], 40)]
+# Distância: 40 dronômetros
+# Tempo de execução: 2.0659 segundos
 
 CASO 2
 9 9
+R 0 0 0 0 0 E 0 0
 0 0 0 0 0 0 0 0 0
+I 0 A 0 0 C 0 0 0 
+0 0 0 0 0 0 0 H 0
 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0   
+0 0 F 0 0 0 0 0 0
+0 0 0 0 0 B 0 0 0
+0 0 J 0 0 0 0 0 0
+0 D 0 0 0 0 0 0 G  
 FIM
 
-# SAÍDA:
-# Sequência de cidades:
-# Sequências de mesma distância: 
-# Distância:
-# Tempo de execução:
+# SAÍDA:E->C->H->B->G->D->J->F->A->I
+# Sequência de cidades: 10
+# Sequências de mesma distância:
+[([E, C, H, G, B, J, D, F, A, I], 40)
+([E, C, H, G, B, D, J, F, A, I], 40)
+([E, H, C, B, G, D, J, F, A, I], 40)
+([I, A, F, J, D, B, G, H, C, E], 40)
+([I, A, F, J, D, G, B, C, H, E], 40)
+([I, A, F, J, D, G, B, H, C, E], 40)
+([I, A, F, D, J, B, G, H, C, E], 40)]
+# Distância: 40 dronômetros
+# Tempo de execução: 20.1569 segundos
 
 CASO 3
 9 9
+R 0 0 0 0 0 E 0 0
 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
+I 0 A 0 0 C 0 0 0 
+0 0 0 0 0 0 0 H 0
+K 0 0 0 0 0 0 0 0
+0 0 F 0 0 0 0 0 0
+0 0 0 0 0 B 0 0 0
+0 0 J 0 0 0 0 0 0
+0 D 0 0 0 0 0 0 G    
 FIM
 
-# SAÍDA:
-# Sequência de cidades:
+# SAÍDA: I->A->C->E->H->B->G->D->J->F->K
+# Sequência de cidades: 11
 # Sequências de mesma distância:
-# Distância:
-# Tempo de execução:
+[([I, A, C, E, H, G, B, F, J, D, K], 42)
+([I, A, C, E, H, G, B, J, D, F, K], 42)
+([I, A, C, E, H, G, B, D, J, F, K], 42)
+([I, K, F, J, D, B, G, H, E, C, A], 42)
+([I, K, F, J, D, G, B, H, E, C, A], 42)
+([I, K, F, D, J, B, G, H, E, C, A], 42)
+([I, K, D, J, F, B, G, H, E, C, A], 42)
+([A, C, E, H, B, G, D, J, F, K, I], 42)
+([A, C, E, H, G, B, F, J, D, K, I], 42)
+([A, C, E, H, G, B, J, D, F, K, I], 42)
+([A, C, E, H, G, B, D, J, F, K, I], 42)
+([K, F, J, D, B, G, H, E, C, A, I], 42)
+([K, F, J, D, G, B, H, E, C, A, I], 42)
+([K, F, D, J, B, G, H, E, C, A, I], 42)
+([K, D, J, F, B, G, H, E, C, A, I], 42)]
+# Distância: 42 dronômetros
+# Tempo de execução: 231.4032 segundos
 
 CASO 4
 9 9
+R 0 0 0 0 0 E 0 0
 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0   
+I 0 A 0 0 C 0 0 0 
+0 0 0 0 0 0 0 H 0
+K 0 0 0 L 0 0 0 0
+0 0 F 0 0 0 0 0 0
+0 0 0 0 0 B 0 0 0
+0 0 J 0 0 0 0 0 0
+0 D 0 0 0 0 0 0 G 
 FIM
 
-# SAÍDA:
-# Sequência de cidades:
+# SAÍDA: I->A->C->E->H->L->B->G->D->J->F->K
+# Sequência de cidades: 12
 # Sequências de mesma distância:
-# Distância:
-# Tempo de execução:
+[([I, A, C, E, H, G, B, L, F, J, D, K], 44)
+([I, K, F, J, D, G, B, L, H, E, C, A], 44)
+([I, K, D, J, F, L, B, G, H, E, C, A], 44)
+([A, C, E, H, L, B, G, D, J, F, K, I], 44)
+([A, C, E, H, G, B, L, F, J, D, K, I], 44)
+([K, F, J, D, G, B, L, H, E, C, A, I], 44)
+([K, D, J, F, L, B, G, H, E, C, A, I], 44)]
+# Distância: 44 dronômetros
+# Tempo de execução: 2991.0730 segundos
 
 CASO 5
 9 9
+R 0 0 0 0 0 E 0 0
 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
+I 0 A 0 0 C 0 0 0 
+0 0 0 0 0 0 0 H 0
+K 0 0 0 L 0 0 0 0
+0 0 F 0 0 0 0 0 M
+0 0 0 0 0 B 0 0 0
+0 0 J 0 0 0 0 0 0
+0 D 0 0 0 0 0 0 G   
 FIM
 
-# SAÍDA:
-# Sequência de cidades:
-# Sequências de mesma distância:
-# Distância:
-# Tempo de execução:
-
-CASO 6
-9 9
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
-FIM
-
-# SAÍDA:
-# Sequência de cidades:
-# Sequências de mesma distância:
-# Distância:
-# Tempo de execução:
-
-CASO 7
-9 9
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
-FIM
-
-# SAÍDA:
-# Sequência de cidades:
-# Sequências de mesma distância:
-# Distância:
-# Tempo de execução:
-
-CASO 8
-9 9
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
-FIM
-
-# SAÍDA:
-# Sequência de cidades:
-# Sequências de mesma distância:
-# Distância:
-# Tempo de execução:
-
-CASO 9
-9 9
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
-FIM
-
-# SAÍDA:
-# Sequência de cidades:
-# Sequências de mesma distância:
-# Distância:
-# Tempo de execução:
-
-CASO 10
-9 9
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
-FIM
-
-# SAÍDA:
-# Sequência de cidades:
-# Sequências de mesma distância:
-# Distância:
-# Tempo de execução:
-
-CASO 11
-9 9
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
-FIM
-
-# SAÍDA:
-# Sequência de cidades:
-# Sequências de mesma distância:
-# Distância:
-# Tempo de execução:
-
-CASO 12
-9 9
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
-FIM
-
-# SAÍDA:
-# Sequência de cidades:
-# Sequências de mesma distância:
-# Distância:
-# Tempo de execução:
-
-CASO 13
-9 9
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
-FIM
-
-# SAÍDA:
-# Sequência de cidades:
-# Sequências de mesma distância:
-# Distância:
-# Tempo de execução:
-
-CASO 14
-9 9
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
-FIM
-
-# SAÍDA:
-# Sequência de cidades:
-# Sequências de mesma distância:
-# Distância:
-# Tempo de execução:
-
-CASO 15
-9 9
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0  
-FIM
-
-# SAÍDA:
-# Sequência de cidades:
-# Sequências de mesma distância:
-# Distância:
-# Tempo de execução:
+# SAÍDA: I->A->C->E->H->M->G->B->L->F->J->D->K
+# Sequência de cidades: 13
+# Sequências de mesma distância:[([I, K, D, J, F, L, B, G, M, H, E, C, A], 44), 
+([A, C, E, H, M, G, B, L, F, J, D, K, I], 44), 
+([K, D, J, F, L, B, G, M, H, E, C, A, I], 44)]
+# Distância: 44 dronômetros
+# Tempo de execução: 42084.9723 segundos

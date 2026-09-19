@@ -33,7 +33,7 @@ Na **primeira unidade da disciplina**, o projeto utiliza uma abordagem de **for�
 
 O projeto é organizado nos seguintes arquivos:
 
-```text
+
 Flyfood/
 │
 ├── algoritmo.py
@@ -50,6 +50,7 @@ Flyfood/
 | `cidade.py` | Contém a classe `Cidade`, criada para facilitar o tratamento das cidades encontradas na matriz. Cada objeto armazena informações como o nome e a posição da cidade na matriz. |
 | `entrada.txt` | Arquivo que contém as matrizes utilizadas como casos de entrada. O caso que será executado é selecionado no `main.py` por meio da variável `caso_escolhido`. |
 
+
 ## 📥 Como clonar o repositório
 
 Para obter uma cópia do projeto em seu computador, é necessário ter o **Git** instalado.
@@ -58,7 +59,7 @@ Para obter uma cópia do projeto em seu computador, é necessário ter o **Git**
 
 Abra o terminal e execute o comando:
 
-```bash
+
 git clone https://github.com/GuilhermeValois/Flyfood.git
 
 Depois abra o projeto com:

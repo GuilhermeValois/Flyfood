@@ -34,6 +34,7 @@ Na **primeira unidade da disciplina**, o projeto utiliza uma abordagem de **for�
 O projeto é organizado nos seguintes arquivos:
 
 
+```text
 Flyfood/
 │
 ├── algoritmo.py
@@ -42,6 +43,7 @@ Flyfood/
 ├── main.py
 ├── README.md
 └── .gitignore
+```
 
 | Arquivo | Descrição |
 |---|---|
@@ -58,7 +60,6 @@ Para obter uma cópia do projeto em seu computador, é necessário ter o **Git**
 ### 1. Clonagem do repositório
 
 Abra o terminal e execute o comando:
-
 
 git clone https://github.com/GuilhermeValois/Flyfood.git
 
